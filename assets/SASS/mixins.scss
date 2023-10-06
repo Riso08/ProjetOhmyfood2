@@ -1,0 +1,136 @@
+/****Alignement***///
+@mixin flex_justify-center{
+    display: flex;
+    justify-content: center;
+  }
+  @mixin flex_justify-start{
+    display: flex;
+    justify-content: flex-start;
+  }
+  /******Le loader*****/
+  @mixin loader-container {
+    .loader-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  /* Animation pour cacher le loader après 2 secondes */
+  animation: hide-loader 2s forwards;
+}
+
+.loader {
+  
+  border-top: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 12em;
+  height: 12em;
+  animation: spin 2s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 5em;
+    animation: spin 2s forwards;
+    color: #9356DC;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+  }
+  /* Animation pour cacher le loader */
+@keyframes hide-loader {
+  to {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* Animation d'appararition progressive des menus */
+@mixin Menu-appear{
+  .entrees {
+    
+    &.delayed-appear {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: appearAnimation 0.5s ease-in-out forwards;
+      animation-delay: 1s; 
+    }
+  }
+  
+  @keyframes appearAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .plats {
+  
+    &.delayed-appear {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: appearAnimation 1s ease-in-out forwards;
+      animation-delay: 1.5s; 
+    }
+  }
+  
+  @keyframes appearAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .desserts {
+  
+    &.delayed-appear {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: appearAnimation 1.5s ease-in-out forwards;
+      animation-delay: 2s;
+    }
+  }
+  
+  @keyframes appearAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+  
+  /****main-contenair****/
+  @mixin main-contener{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      @include flex_justify-center;
+      text-align: center;
+      flex-direction: column;
+      height: 100%;
+      font-family: $font-family;
+       background-color: #F6F6F6;
+    }
+  
+  /*****Header*****/
+  @mixin logo{
+    background-color: #ffffff;
+    padding: 5% 0% 5% 0%;
+    width: 100%;
+    
+  & img {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    
+  }
+}
+ 

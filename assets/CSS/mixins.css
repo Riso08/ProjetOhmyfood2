@@ -1,0 +1,12 @@
+/****Alignement***/
+/******Le loader*****/
+/* Animation pour cacher le loader */
+@keyframes hide-loader {
+  to {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* Animation d'appararition progressive des menus */
+/****main-contenair****/
+/*****Header*****//*# sourceMappingURL=mixins.css.map */

@@ -1,0 +1,434 @@
+@charset "UTF-8";
+/*****Mes variables*****/
+/****Color*****/
+/****font****/
+/*****Mes mixins*****/
+/****Alignement***/
+/******Le loader*****/
+/* Animation pour cacher le loader */
+@keyframes hide-loader {
+  to {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* Animation d'appararition progressive des menus */
+/****main-contenair****/
+/*****Header*****/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Le loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  /* Animation pour cacher le loader après 2 secondes */
+  animation: hide-loader 2s forwards;
+}
+
+.loader {
+  border-top: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 12em;
+  height: 12em;
+  animation: spin 2s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader i {
+  font-size: 5em;
+  animation: spin 2s forwards;
+  color: #9356DC;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.main-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: #F6F6F6;
+}
+
+.Logo {
+  background-color: #ffffff;
+  height: 50px;
+  width: 100%;
+}
+.Logo img {
+  max-width: 162px;
+  margin-top: 10px;
+  width: 100%;
+}
+.Logo i {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  max-width: 17.2px;
+  text-decoration: none;
+  color: black;
+}
+@media screen and (max-width: 240px) {
+  .Logo i {
+    display: none;
+  }
+}
+
+.image-menu img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+.page-menu {
+  width: 100%;
+  height: 100%;
+  background-color: #F6F6F6;
+  border-radius: 7.5vw 7.5vw 0 0;
+  margin-top: -4em;
+}
+
+.les-menus {
+  width: 90%;
+  padding: 5%;
+}
+
+.menu-title {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 100;
+  font-family: "Shrikhand";
+  display: flex;
+  justify-content: flex-start;
+}
+.menu-title h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 20px;
+  max-width: 100%;
+}
+.menu-title i {
+  font-size: 2.2em;
+  cursor: pointer;
+  max-width: 100%;
+}
+.menu-title .fa-regular {
+  opacity: 1;
+  z-index: 0;
+}
+.menu-title .fa-regular:hover {
+  opacity: 0;
+}
+.menu-title .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  z-index: 1;
+  transition: all 500ms ease-in-out;
+  margin-left: -28.4px;
+}
+.menu-title .fa-solid:hover {
+  opacity: 1;
+}
+
+.articles-title {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+.articles-title p {
+  border-bottom: 4px solid #99E2D0;
+  width: 2.5em;
+  padding-bottom: 0.3em;
+}
+
+.Plat {
+  background-color: #ffffff;
+  display: inline-block;
+  border-radius: 15.04px;
+  padding: 10px 5%;
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Plat:hover:hover {
+  background-color: white;
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.4);
+}
+.Plat:hover:hover h3 {
+  max-width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: max-width 0.2s ease-in-out;
+}
+.Plat:hover:hover p {
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: max-width 0.2s ease-in-out;
+}
+.Plat .menu-text {
+  text-align: left;
+}
+.Plat .menu-text h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 90%;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.Plat .menu-text p {
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80%;
+}
+.Plat .truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  width: auto;
+  transition: max-width 0.5s ease-in-out;
+}
+.Plat .truncate-text:hover {
+  max-width: 70%;
+  width: auto;
+  transition: max-width 0.5s ease-in-out;
+}
+.Plat .price {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -20px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+.Plat:hover .price {
+  transform: translateX(-4em);
+}
+.Plat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background-color: #99E2D0;
+  transition: width 0.3s ease-in-out;
+}
+.Plat:hover::before {
+  width: 4.5em;
+}
+.Plat .icon-container {
+  position: absolute;
+  right: 0;
+  top: 32%;
+  display: flex;
+  align-items: center;
+  width: 0;
+  transition: transform 0.3s ease-in-out;
+}
+.Plat .icon-container.icon-hidden {
+  opacity: 0;
+  font-size: 1.5vw;
+  width: 0;
+  transition: opacity 0s ease-in-out, width 0.3s ease-in-out;
+}
+.Plat .icon-container i {
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 0.5em;
+  font-size: 2em;
+  color: #99E2D0;
+}
+.Plat:hover .icon-container.icon-hidden {
+  opacity: 1;
+  width: 6.6em;
+  animation: rotateAnimation 0.5s ease-in-out;
+  transform-origin: 26% 49%;
+  font-size: 8px;
+  transition: opacity 0.4s ease-in-out;
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.entrees.delayed-appear {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: appearAnimation 0.5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes appearAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.plats.delayed-appear {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: appearAnimation 1s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes appearAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.desserts.delayed-appear {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: appearAnimation 1.5s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+@keyframes appearAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.button {
+  overflow: hidden;
+  display: inline-block;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border: none;
+  border-radius: 80px;
+  margin-top: 1em;
+  color: #ffffff;
+  cursor: pointer;
+  max-width: 100%;
+  height: 50px;
+  font-weight: 500;
+}
+.button p {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  margin-left: 3em;
+  margin-right: 3em;
+  max-width: 100%;
+  margin-top: 12px;
+}
+.button:hover {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to bottom, #ff93e1, #a16be0);
+}
+
+.Bas-page {
+  background-color: #353535;
+  width: 100%;
+  height: 100%;
+  color: #F3F3F3;
+  margin-top: 8vw;
+}
+
+.contact-link {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.A-propos {
+  padding: 2em 0em 1em 2em;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.A-propos img {
+  filter: invert(100%);
+  width: 137.58px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  max-width: 100%;
+}
+.A-propos i {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 15px;
+  margin-bottom: 4px;
+  align-items: center;
+}
+.A-propos .handshake {
+  font-size: 10px;
+}
+.A-propos .propose-partnair {
+  margin-top: 1vw;
+}
+.A-propos .mentions-Contact {
+  width: 100%;
+}
+.A-propos span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 0.5em;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.A-propos a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.A-propos p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: flex-start;
+}/*# sourceMappingURL=menu-Mobile.css.map */

@@ -1,0 +1,171 @@
+/*****Mes variables*****/
+/****Color*****/
+/****font****/
+/*****Mes mixins*****/
+/****Alignement***/
+/******Le loader*****/
+/* Animation pour cacher le loader */
+@keyframes hide-loader {
+  to {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* Animation d'appararition progressive des menus */
+/****main-contenair****/
+/*****Header*****/
+@media screen and (min-width: 1024px) {
+  .main-container {
+    background-color: #ffffff;
+    height: 100%;
+  }
+  .Logo {
+    padding: 12px 0px 12px 0px;
+  }
+  .Logo img {
+    width: 14%;
+  }
+  .Logo i {
+    top: 1.3em;
+    font-size: 20px;
+  }
+  .image-menu img {
+    height: 56vh;
+    object-fit: cover;
+  }
+  .page-menu {
+    width: 72vw;
+    border-radius: 3vw 3vw 0 0;
+    margin-top: -3em;
+    margin-left: 14vw;
+  }
+  .les-menus {
+    width: 46vw;
+    padding: 0% 15% 5% 18%;
+  }
+  .menu-title {
+    margin-left: 12vw;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 3em;
+    display: flex;
+  }
+  .menu-title i {
+    font-size: 2.2em;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 9.5em;
+  }
+  .menu-title .fa-solid {
+    margin-left: 9.5em;
+  }
+  .articles-title {
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: 1.2em;
+  }
+  .articles-title p {
+    border-bottom: 3px solid #99E2D0;
+    width: 30px;
+  }
+  .Plat {
+    border-radius: 1vw;
+    padding: 10px 16px;
+    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5em;
+    overflow: hidden;
+  }
+  .Plat:hover:hover {
+    box-shadow: none;
+  }
+  .Plat:hover::before {
+    width: 4vw;
+  }
+  .Plat .icon-container {
+    top: 32%;
+  }
+  .Plat .icon-container i {
+    font-size: 0.5em;
+  }
+  .Plat:hover .icon-container.icon-hidden {
+    width: 2.8vw;
+    font-size: 1.2em;
+  }
+  .Plat .price {
+    font-size: 0.8em;
+  }
+  .Plat:hover .price {
+    transform: translateX(-4vw);
+  }
+  .Plat .menu-text h3 {
+    margin-top: 0;
+    font-size: 17px;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .Plat .menu-text p {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .button {
+    margin-top: 2em;
+    margin-bottom: 1px;
+  }
+  .Bas-page {
+    height: 100%;
+    margin-top: 0;
+  }
+  .A-propos {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8em 2em 0.3em 0em;
+  }
+  .A-propos img {
+    width: 7vw;
+    position: absolute;
+    right: 0;
+    margin-right: 4.5vw;
+    margin-top: 3vw;
+  }
+  .A-propos .propose-partnair {
+    display: flex;
+    text-align: center;
+    margin-top: 2.2vw;
+    justify-content: flex-end;
+    margin-left: 40vw;
+  }
+  .A-propos .mentions-Contact {
+    display: flex;
+    margin-right: 17vw;
+    margin-top: 2vw;
+    justify-content: flex-end;
+  }
+  .A-propos .handshake {
+    font-size: 0.8vw;
+  }
+  .A-propos i {
+    margin-left: -1em;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .A-propos span {
+    margin-left: 0.5em;
+    margin-right: 2em;
+    font-size: 1.1vw;
+  }
+  .A-propos a {
+    overflow: visible;
+  }
+  .A-propos p {
+    font-size: 1.1vw;
+    margin-left: 2em;
+    margin-right: -1em;
+  }
+}/*# sourceMappingURL=menu-desktop-tablet.css.map */
